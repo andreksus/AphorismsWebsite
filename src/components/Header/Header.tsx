@@ -1,8 +1,11 @@
-import {FC} from "react";
+import React, {FC} from "react";
 import './HeaderStyles';
-import './Styles.css';
+import '../pages/MainPage/Styles.css';
+import {getTag} from "../../methods/getTag";
+
 export const Header: FC = () => {
-    const api: string = "https://quotes.rest/qod?language=en";
+    const url = "https://api.quotable.io/quotes?tags=business&limit=5";
+    console.log(getTag(url));
 
     const fetchApi = async (url: string) => {
         const response = await fetch(url);
@@ -10,23 +13,12 @@ export const Header: FC = () => {
         console.log(data);
     }
 
-    fetchApi(api).then();
-
     return (
         <div className={"headersBody"}>
             <div className={"headersTitle"}>
                 <p className={"title"}>AphorismsWebsite</p>
             </div>
-            <div className={"line1"}></div>
-            <div className={"links"}>
-                <div className={"favorites"}>Favorites</div>
-                <div className={"menu"}>
-                    <div className={"categories"}>Categories</div>
-                    <img className={"menuIcon"} src="public/icons/menu.svg" alt=""/>
-                </div>
-            </div>
-            <div className={"line2"}></div>
-            <p className={"bestAphorisms"}>Best Aphorisms</p>
         </div>
     )
 }
+

@@ -1,11 +1,11 @@
-/*Styles for headers field*/
+/*Header's block*/
 .headersBody {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/**/
+/*back site's title*/
 .headersTitle {
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@
     margin-bottom: 25px;
 }
 
-/**/
+/*site's title*/
 .title {
     align-self: center;
     color: #DAE0F9;
@@ -46,6 +46,7 @@
     margin-bottom: 30px;
 }
 
+/**/
 .links {
     display: flex;
     width: 420px;
@@ -53,8 +54,8 @@
     margin-bottom: 15px;
 }
 
-/**/
-.favorites {
+/*block Favorites and Categories*/
+.titles {
     font-family: 'Inria Sans', serif;
     font-style: normal;
     font-weight: 400;
@@ -62,26 +63,80 @@
     color: #9F4747;
 }
 
-/**/
-.categories {
+.titles_menu {
     font-family: 'Inria Sans', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 17px;
     color: #9F4747;
+}
+
+.categoryMenu {
+    position: relative;
+    display: inline-block;
+}
+
+.categoryMenu-categories {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 0 1px 0 1px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.menuTitle{
+    font-family: 'Inria Sans', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    margin-right: 10px;
+}
+
+.categoryMenu-categories a {
+    padding: 10px 16px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.menuTitle:hover {
+    color: #9F4747;
+}
+
+.categoryMenu:hover .categoryMenu-categories {
+    display: block;
 }
 
 .menu {
     display: flex;
     justify-content: space-between;
     width: 155px;
+    position: relative;
 }
 
-.menuIcon {
+.menuButton {
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menuArrow {
     height: 10px;
     align-self: center;
 }
 
+/*title of bests*/
 .bestAphorisms {
     font-family: 'inria sans', serif;
     font-size: 40px;
