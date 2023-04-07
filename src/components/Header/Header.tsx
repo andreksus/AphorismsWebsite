@@ -5,7 +5,6 @@ import {getTag} from "../../methods/getTag";
 
 export const Header: FC = () => {
     const url = "https://api.quotable.io/quotes?tags=business&limit=5";
-    console.log(getTag(url));
 
     const fetchApi = async (url: string) => {
         const response = await fetch(url);
